@@ -12,12 +12,25 @@ body {
    align-items: center;
 }
 
-body .card {
+body .cardone{
  width: 270px;
  height: 480px;
    background-color: #000000;
    padding: 14px;
    padding-top: 0px;
+   border-radius: 25px;
+
+}
+
+body .cardtwo{
+ width: 270px;
+ height: 480px;
+   background-color: #000000;
+   padding: 14px;
+   padding-top: 0px;
+   border-radius: 25px;
+
+
 }
 
   h1 {
@@ -26,33 +39,25 @@ display: flex;
 justify-content: center;
 align-items: center;
 
-  };
-
   }
 
   hr {
-    border:0;
-    margin:0;
-    width:100%;
-    height:2px;
-    background: #7552a1;
-  }
+background-color: #7552a1;
+height: 1px;
+margin: 0px;  }
 
 p {
 color: #fff;
 font-size: 10px;
 }
+
+
 .inside {
   color: #000;
   font-size: 10px;
   }
 }
-.buttons {
-display: flex;
-justify-content: center;
-flex-direction: ;
-align-items: flex-end;
-padding: 0px;
+
 
 }
 .song {
@@ -69,4 +74,7 @@ span {
   font-size: 6.5px;
   padding:
   }
-}
+
+  .hidden {
+    display: none;
+  }
