@@ -1,7 +1,3 @@
-
-
-/* first decline_button */
-
 $(document).ready(function() {
   $('#action_button').on('click', function(event) {
 
