@@ -6,23 +6,26 @@
 
     <title>Queue App</title>
 
-    <meta name="description" content="Queue">
+    <meta name="description" content="Queue App">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/queue.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  <link rel="stylesheet" href="css/queue.css">
+
+
+
   <body>
 
 <!-- First Page -->
-<section class="section">
 
-<div class="card one">
+<div class="cardone" >
 
-  <div class= "column"> <h1> Song Requests </h1></div>
-
+  <div class= "column tile_sr1"> <h1> Song Requests </h1></div>
+<hr class= "line1">
 <div class="columns requests">
   <div class="column is-1">
-    <p>BPM  <p>
+    <br><p>BPM  <p>
     </div>
   <div class="column is-1">
   </div>
@@ -37,19 +40,19 @@
 <img src= "images/icon.png">
 </figure>
 </div>
-<div class="column is-9">
-  <p class="song">
-  I Feel Love - Donna Summers <br> <span> Haley Martin - Please play it's my birthday :) </span></p>
+<div class="column is-9 donna">
+  <p class="song" data-artist='Donna Sommers' data-song= 'I Feel Love'>
+  I Feel Love - Donna Sommers <br> <span> Haley Martin - Please play it's my birthday :) </span></p>
 </div>
 </div>
 <!-- song -->
-<div class="columns requests">
+<div class="columns requests donna">
   <div class="column is-2"> <h2 class= 'bpm'>94</h2>  </div>
   <div class="column is-2"> <figure class="image is-13x13">
   <img src= "images/icon2.png">
   </figure>
   </div>
-  <div class="column is-9">
+  <div class="column is-9 donna">
     <p class="song">
   Nobody - Mitski</p>
   </div>
@@ -103,51 +106,39 @@ Like Mike - Good Artist</p>
 </div>
 </div>
 
-<div class="columns requests">
-<div class="column is-2"> <h2 class= 'bpm'> 32</h2>  </div>
-<div class="column is-2"> <figure class="image is-13x13">
-<img src= "images/icon4.png">
-</figure>
-</div>
-<div class="column is-9">
-<p class="song">
-ANOTHA ONE - Your Girl</p>
-</div>
-
-</div>
 <br>
-<div class="columns requests"
-<div class="container buttons">
-<a class="button is-medium is-fullwidth is-danger">DECLINE ALL</a>
+<br>
+
+
+<div class="columns">
+  <div class=" container buttons" id= action_button>
+<a class="button is-small is-fullwidth  is-danger" id="decline_button" > DECLINE ALL</a>
+</div>
 </div>
 </div>
 
-</section>
+<!-- two page -->
+  <div class="cardtwo hidden">
+    <div class="column"> <h1>Haley Martin</h1>  </div>
+  <hr>
 
-<!-- Second Page -->
-<section class="section">
-  <div class="card two">
-    <div class="columns response">
-<!-- header -->
-  <div class= "column is-1"> <h1> < </h1></div>
-  <div class="column is-10"> <h1>Haley Martin</h1>  </div>
-</div>
+
 <br><br>  <br><br>  <br><br>  <br><br>  <br><br>
 <!-- message
 -->
-<div class="columns requests">
-<div class="column is-2">
+<div class="columns two">
+<div class="column is-2 two">
 <br><br>
 <figure class="image is-14x14">
 <img src= "images/icon.png">
 </figure> </div>
 
 
-<div class="column is-8">
-  <div class="box">
-      <div class="media-content">
-        <div class="content">
-          <p class= "inside">
+<div class="column is-8 two">
+  <div class="box two">
+      <div class="media-content two">
+        <div class="content two">
+          <p class= "inside two">
             Please play! It's my birthday and I would REALLY appreciate it.
           </p>
         </div>
@@ -159,28 +150,27 @@ ANOTHA ONE - Your Girl</p>
 <!-- buttons -->
 
 
-  <div class="container buttons">
-  <a class="button is-medium button is-danger">DECLINE</a><a class="button is-medium">ACCEPT</a>
+  <div class="container buttons " id= action_button2 >
+  <a class="button is-medium button is-danger" id="decline_button2">DECLINE</a><a class="button is-medium" id="accept_button">ACCEPT</a>
   </div>
 </div>
 </div>
 </div>
-</section>
+
 <br>
 
 <!-- Third Page -->
-<section class="section">
-  <div class="card three">
+  <div class="cardthree" style="visibility: hidden">
     <div class="columns response">
 <!-- header -->
   <div class= "column is-1"> <h1> < </h1></div>
   <div class="column is-10"> <h1>Haley Martin</h1>  </div>
-</div>
+</div><hr>
 <br><br>  <br><br>  <br><br>  <br><br>  <br><br><br>
 
 <!-- message
 -->
-<div class="columns requests">
+<div class="columns">
 <div class="column is-2">
 <br><br>
 <figure class="image is-14x14">
@@ -211,21 +201,22 @@ ANOTHA ONE - Your Girl</p>
 </div>
 </div>
 
-</section>
+
 
     <!--  Fourth Page -->
     <section class="section">
 
-      <div class="card four">
+      <div class="cardfour hidden" >
         <div class="columns response">
 <!-- header -->
-      <div class= "column is-1"> <h1> < </h1></div>
-      <div class="column is-10"> <h1>Haley Martin</h1>  </div>
-    </div>
+
+      <div class="column"> <h1>Haley Martin</h1>  </div>
+  <hr>
+
  <br><br>  <br><br>  <br><br><br>
 <!-- message
 -->
-<div class="columns requests">
+<div class="columns">
   <div class="column is-2">
     <br><br>
  <figure class="image is-14x14">
@@ -246,7 +237,7 @@ ANOTHA ONE - Your Girl</p>
 </div>
 </div>
 
-<div class="columns requests">
+<div class="columns">
   <div class="column is-5">
     <br></div>
 <div class="column is-7">
@@ -270,6 +261,12 @@ ANOTHA ONE - Your Girl</p>
   <input class="input is-warning is-small" type="text" placeholder="Message...">
 
 </section>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+
+   <script src="js/scripts.js" ></script>
 
 
 </html>
